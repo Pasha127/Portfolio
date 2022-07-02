@@ -40,20 +40,20 @@ body{
     color: #465b7c;
     display: flex;    
     transform: translate(95px, -300px);
-    z-index: 0;
+    z-index: 1;
     transition-duration: .3s;        
 }
 #checkbox01:checked ~ .surname{
     color: #465b7c;
     display: flex;    
     transform: translate(320px, -300px);
-    z-index: 0;
+    z-index: 1;
     transition-duration: .3s;        
 }    
 #checkbox01:checked ~ .Name02{    
     display: flex;    
     transform: translate(-177px, 400px);
-    z-index: 0;
+    z-index: 1;
     color: #768bad00;
     transition-duration: .3s;        
 }    
@@ -80,7 +80,8 @@ body{
     border-radius: 50%;
     background-position: center;
     background-size: cover;
-    overflow: hidden;    
+    overflow: hidden;
+    box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.45);
     z-index: 0;      
 } 
 #checkbox01:not(checked) ~ .gamesButton{
@@ -94,10 +95,11 @@ body{
 }
 #checkbox01:checked ~ .gamesButton{    
     transform: translate(210px, -140px);
-    transition-duration: .3s;    
+    transition-duration: .3s;
+    z-index: 1;    
 }
 .gamesButton:hover{
-    background-color: #A1AD7F;
+    background-color: #000000;
     height: 80px;
     width: 80px;
 }
@@ -125,7 +127,8 @@ body{
 }
 #checkbox01:checked ~ .eduButton{    
     transform: translate(0, -140px);
-    transition-duration: .3s;    
+    transition-duration: .3s;
+    z-index: 1;    
 }
 /* .eduText{
     position: absolute;
@@ -151,7 +154,8 @@ body{
 }
 #checkbox01:checked ~ .workButton{    
     transform: translate(-210px, -140px);
-    transition-duration: .3s;    
+    transition-duration: .3s;
+    z-index: 1;    
 }
 /* .workText{
     position: absolute;
@@ -213,19 +217,6 @@ input[type="checkbox"]:hover ~ label{
     height: 400px;
     width: 400px;
 } 
-
-#checkbox01:checked ~ .imageContainer{
-    height: 210px;
-    width: 210px;
-    box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.45);
-    transform: translate(-15px, calc(-50vh + 150px));    
-    transition-duration: .3s;    
-}
-#checkbox01:not(checked) ~ .imageContainer{
-    position: absolute;
-    transform: translate(0px, 0px);
-    transition-duration: .3s;
-}
 #checkbox01:checked ~ label{
     margin: 0;    
     display: flex;
@@ -234,9 +225,23 @@ input[type="checkbox"]:hover ~ label{
     width: 150vw;    
     border-radius: 0%;
     background-color: rgba(170, 92, 180, 0);
-    z-index: -1;
+    z-index: 0;
 
 }
+#checkbox01:checked ~ .imageContainer{
+    height: 210px;
+    width: 210px;
+    box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.45);
+    transform: translate(-15px, calc(-50vh + 150px));    
+    transition-duration: .3s;
+    z-index: 1;    
+}
+#checkbox01:not(checked) ~ .imageContainer{
+    position: absolute;
+    transform: translate(0px, 0px);
+    transition-duration: .3s;
+}
+
 #checkbox01:checked ~ .artBorder{
     height: 90vh;
     min-width: 840px;    
@@ -251,7 +256,7 @@ input[type="checkbox"]:hover ~ label{
     overflow: hidden;
     transition-duration: .5s;    
     /* box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.377); */ 
-    z-index: 0;
+    z-index: 1;
 }
 #checkbox01:not(checked) ~ .artBorder{
     top: auto;
