@@ -9,49 +9,67 @@ body{
     font-family: 'Robto', sans-serif;    
     font-weight: 600;
     font-size: 20pt;
-    z-index: -1;
+    z-index: -2;
     overflow: hidden;
     
 }
-#checkbox01:not(checked) ~ .Name01{
-    color: #768BAD;
+#checkbox01:not(checked) ~ .firstName{
+    color: #465b7c;
     display: flex;
     justify-content: center;
-    transform: translateY(-300px);   
+    transform: translate(180px,-300px);
+    z-index: 0;   
+        
+}
+#checkbox01:not(checked) ~ .surname{
+    color: #465b7c;
+    display: flex;
+    justify-content: center;
+    transform: translate(180px,-300px);
+    z-index: 0;   
         
 }
 #checkbox01:not(checked) ~ .Name02{
-    color: #768BAD;
+    color: #465b7c;
     display: flex;
     justify-content: center;
-    transform: translateY(-300px);   
-        
+    transform: translate(-177px,300px);
+    z-index: 0;       
 }
-.mouseZone{
-    height: 400px;
-    width: 400px;
-    display: inline-block;
-    position: absolute;      
-    border-radius: 50%;
-    background-position: center;
-    background-size: cover;
-    /* background-color: bisque; */
-    transition: box-shadow 0.3s;
-    transition: transform .3s;
+#checkbox01:checked ~ .firstName{
+    color: #465b7c;
+    display: flex;    
+    transform: translate(95px, -300px);
     z-index: 0;
-    
+    transition-duration: .3s;        
 }
+#checkbox01:checked ~ .surname{
+    color: #465b7c;
+    display: flex;    
+    transform: translate(320px, -300px);
+    z-index: 0;
+    transition-duration: .3s;        
+}    
+#checkbox01:checked ~ .Name02{    
+    display: flex;    
+    transform: translate(-177px, 400px);
+    z-index: 0;
+    color: #768bad00;
+    transition-duration: .3s;        
+}    
+
 .artBorder{
     height: 400px;
     width: 400px;
     background-color: rgba(54, 113, 224, 0);
-    display: inline-block;
-    position: absolute;      
+    display: flex;    
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 200px;
     border-radius: 50%;    
     overflow: hidden;
-    /* box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.377); */ 
     z-index: 0;
-
 }
 .imageContainer{
     height: 400px;
@@ -62,34 +80,28 @@ body{
     border-radius: 50%;
     background-position: center;
     background-size: cover;
-    overflow: hidden;
-    /* box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.377); */ 
-    z-index: 0;
-      
+    overflow: hidden;    
+    z-index: 0;      
 } 
-.overlay{
-    height: 400px;
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 0;
-}
-
-.gamesButton{
+#checkbox01:not(checked) ~ .gamesButton{
+    display: flex;
     position: absolute;
     height: 70px;
     width: 70px;
-    background-color: #E5FAAA;    
-    border-radius: 70px;
-    top: 70px;
-    left: 70px;
+    background-color: #ffffff;    
+    border-radius: 70px;    
     z-index: 0;
+}
+#checkbox01:checked ~ .gamesButton{    
+    transform: translate(210px, -140px);
+    transition-duration: .3s;    
 }
 .gamesButton:hover{
     background-color: #A1AD7F;
     height: 80px;
     width: 80px;
 }
-.gameText{
+/* .gameText{
     position: absolute;
     top: 0;
     right: 0;
@@ -101,18 +113,21 @@ body{
     width: 50px;
     height: 40px;
     z-index: 0;
-}
-.eduButton{
+} */
+#checkbox01:not(checked) ~ .eduButton{
+    display: flex;
     position: absolute;
     height: 70px;
     width: 70px;
-    background-color: #E5FAAA;    
-    border-radius: 70px;
-    top: 70px;
-    left: 70px;
+    background-color: #ffffff;    
+    border-radius: 70px;    
     z-index: 0;
 }
-.eduText{
+#checkbox01:checked ~ .eduButton{    
+    transform: translate(0, -140px);
+    transition-duration: .3s;    
+}
+/* .eduText{
     position: absolute;
     top: 0;
     right: 0;
@@ -124,18 +139,21 @@ body{
     width: 50px;
     height: 40px;
     z-index: 0;
-}
-.workButton{
+} */
+#checkbox01:not(checked) ~ .workButton{
+    display: flex;
     position: absolute;
     height: 70px;
     width: 70px;
-    background-color: #E5FAAA;    
-    border-radius: 70px;
-    top: 70px;
-    left: 70px;
+    background-color: #ffffff;    
+    border-radius: 70px;    
     z-index: 0;
 }
-.workText{
+#checkbox01:checked ~ .workButton{    
+    transform: translate(-210px, -140px);
+    transition-duration: .3s;    
+}
+/* .workText{
     position: absolute;
     top: 0;
     right: 0;
@@ -147,16 +165,34 @@ body{
     width: 50px;
     height: 40px;
     z-index: 0;
-}
-.fa-solid{
+} */
+.fa-briefcase{
     position: absolute;
     height: 25px;
     width: 24px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    color: rgb(0, 0, 0);    
+    top: 23px;    
+    left: 22px;
+    color: #465b7c;   
+    margin:auto;
+    z-index: 0;
+}
+.fa-graduation-cap{
+    position: absolute;
+    height: 25px;
+    width: 24px;
+    top: 23px;    
+    left: 19px;
+    color: #465b7c;   
+    margin:auto;
+    z-index: 0;
+}
+.fa-gamepad{
+    position: absolute;
+    height: 25px;
+    width: 19px;
+    top: 23px;    
+    left: 20px;
+    color: #465b7c;   
     margin:auto;
     z-index: 0;
 }
@@ -170,22 +206,8 @@ body{
     z-index: 0;
       
 }
-
-
-/* .mouseZone:hover{
-    height: 600px;
-    width: 600px;
-    transition-duration: .5s;
-}  */
-/* .mouseZone:hover .imageContainer{
-    height: 420px;
-    width: 420px;
-    box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.45);
-    transform: translateY(-50%);
-    transition-duration: .3s;
-}  */
  
- input[type="checkbox"]:hover ~ label{
+input[type="checkbox"]:hover ~ label{
     
     background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0, 0, 0, 0.315) 100%);
     height: 400px;
@@ -193,58 +215,52 @@ body{
 } 
 
 #checkbox01:checked ~ .imageContainer{
-    height: 430px;
-    width: 430px;
+    height: 210px;
+    width: 210px;
     box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.45);
-    transform: translate(-15px, calc(-50vh + 250px));    
+    transform: translate(-15px, calc(-50vh + 150px));    
     transition-duration: .3s;    
 }
 #checkbox01:not(checked) ~ .imageContainer{
-    top: 0px;
-    left: 0px;
+    position: absolute;
     transform: translate(0px, 0px);
     transition-duration: .3s;
 }
 #checkbox01:checked ~ label{
     margin: 0;    
     display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    height: 200vh;
-    width: 200vw;   
-    top: -40vh;
-    left: -100vw; 
+    position: absolute;    
+    height: 150vh;
+    width: 150vw;    
     border-radius: 0%;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: -2;
+    background-color: rgba(170, 92, 180, 0);
+    z-index: -1;
 
 }
 #checkbox01:checked ~ .artBorder{
     height: 90vh;
     min-width: 840px;    
     border-radius: 40px;
-    transform: translate(-210px,0);
+    /* transform: translate(0,0); */
     background-color: #C5DAFB;
-    display: inline-block;
-    position: absolute;       
+    display: flex;    
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 200px;       
     overflow: hidden;
-    transition-duration: .5s;
+    transition-duration: .5s;    
     /* box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.377); */ 
     z-index: 0;
 }
 #checkbox01:not(checked) ~ .artBorder{
-    top: 0px;
-    left: 0px;
+    top: auto;
+    left: auto;
     border-radius: 50%;    
     transform: translate(0px, 0px);
     transition-duration: .3s;
 }
-#checkbox01:checked ~ .gamesButton{    
-    transform: translateY(180px);
-    transition-duration: .3s;
-    
-}
+
 
 
 
