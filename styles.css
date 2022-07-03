@@ -489,7 +489,7 @@ input[type="checkbox"]:hover + .label1{
 }
 
 #checkbox03:not(checked) ~ .workContainer{    
-    font-size: 12;    
+    font-size: 14pt;    
     height: 540px;
     min-width: 630px;    
     border-radius: 40px;    
@@ -504,6 +504,12 @@ input[type="checkbox"]:hover + .label1{
     box-shadow: 0 16px 20px rgba(0, 0, 0, 0.45),0 0px 0px 2px black;     
     z-index: 2;
         
+}
+.workT{
+    display: block;
+    position: absolute;
+    top: -14px;
+    
 }
 #checkbox03:checked ~ .workContainer{    
     font-size: 12;    
@@ -576,7 +582,7 @@ input[type="checkbox"]:hover + .label1{
         
 }
 #checkbox04:checked ~ .tdContainer{    
-    font-size: 12;    
+    
     height: 540px;
     min-width: 630px;    
     border-radius: 40px;    
