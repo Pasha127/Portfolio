@@ -10,13 +10,14 @@ body{
     font-weight: 600;
     font-size: 20pt;
     z-index: -2;
-    overflow: hidden;
+    overflow: hidden; 
     
 }
 #checkbox01:not(checked) ~ .firstName{
     color: #465b7c;
     display: flex;
     justify-content: center;
+    top: 200px;
     transform: translate(180px,-300px);
     z-index: 0;   
         
@@ -38,15 +39,19 @@ body{
 }
 #checkbox01:checked ~ .firstName{
     color: #465b7c;
-    display: flex;    
-    transform: translate(95px, -300px);
+    display: flex;
+    position: absolute; 
+    top: 195px;   
+    transform: translate(-180px, -125px);
     z-index: 1;
     transition-duration: .3s;        
 }
 #checkbox01:checked ~ .surname{
     color: #465b7c;
-    display: flex;    
-    transform: translate(320px, -300px);
+    display: flex;
+    position: absolute; 
+    top: 195px;   
+    transform: translate(210px, -125px);
     z-index: 1;
     transition-duration: .3s;        
 }    
@@ -59,7 +64,7 @@ body{
 }    
 
 .artBorder{
-    height: 400px;
+    height: 1500vh;
     width: 400px;
     background-color: rgba(54, 113, 224, 0);
     display: flex;    
@@ -94,7 +99,10 @@ body{
     z-index: 0;
 }
 #checkbox01:checked ~ .gamesButton{    
-    transform: translate(210px, -140px);
+    display: flex;
+    position: absolute; 
+    top: 200px;   
+    transform: translate(300px, 20px);
     transition-duration: .3s;
     z-index: 1;    
 }
@@ -103,6 +111,7 @@ body{
     height: 80px;
     width: 80px;
 }
+
 /* .gameText{
     position: absolute;
     top: 0;
@@ -116,6 +125,28 @@ body{
     height: 40px;
     z-index: 0;
 } */
+#checkbox01:not(checked) ~ .tdButton{
+    display: flex;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: #ffffff;    
+    border-radius: 70px;    
+    z-index: 0;
+}
+#checkbox01:checked ~ .tdButton{    
+    display: flex;
+    position: absolute; 
+    top: 200px;   
+    transform: translate(110px, 20px);
+    transition-duration: .3s;
+    z-index: 1;    
+}
+.tdButton:hover{
+    background-color: #000000;
+    height: 80px;
+    width: 80px;
+}
 #checkbox01:not(checked) ~ .eduButton{
     display: flex;
     position: absolute;
@@ -126,7 +157,10 @@ body{
     z-index: 0;
 }
 #checkbox01:checked ~ .eduButton{    
-    transform: translate(0, -140px);
+    display: flex;
+    position: absolute; 
+    top: 200px;   
+    transform: translate(-300px, 20px);
     transition-duration: .3s;
     z-index: 1;    
 }
@@ -153,7 +187,10 @@ body{
     z-index: 0;
 }
 #checkbox01:checked ~ .workButton{    
-    transform: translate(-210px, -140px);
+    display: flex;
+    position: absolute; 
+    top: 200px;   
+    transform: translate(-110px, 20px);
     transition-duration: .3s;
     z-index: 1;    
 }
@@ -180,6 +217,16 @@ body{
     margin:auto;
     z-index: 0;
 }
+.fa-cubes{
+    position: absolute;
+    height: 25px;
+    width: 24px;
+    top: 23px;    
+    left: 22px;
+    color: #465b7c;   
+    margin:auto;
+    z-index: 0;
+}
 .fa-graduation-cap{
     position: absolute;
     height: 25px;
@@ -190,11 +237,12 @@ body{
     margin:auto;
     z-index: 0;
 }
-.fa-gamepad{
+.fa-unity{
     position: absolute;
     height: 25px;
     width: 19px;
-    top: 23px;    
+    font-size: 24pt;
+    top: 20px;    
     left: 20px;
     color: #465b7c;   
     margin:auto;
@@ -232,18 +280,19 @@ input[type="checkbox"]:hover ~ label{
     height: 210px;
     width: 210px;
     box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.45);
-    transform: translate(-15px, calc(-50vh + 150px));    
+    transform: translate(0px, calc(-50vh + 110px));    
     transition-duration: .3s;
     z-index: 1;    
 }
 #checkbox01:not(checked) ~ .imageContainer{
     position: absolute;
+       
     transform: translate(0px, 0px);
     transition-duration: .3s;
 }
 
 #checkbox01:checked ~ .artBorder{
-    height: 90vh;
+    height: 150vh;
     min-width: 840px;    
     border-radius: 40px;
     /* transform: translate(0,0); */
@@ -252,7 +301,7 @@ input[type="checkbox"]:hover ~ label{
     position: absolute;
     left: auto;
     right: auto;
-    top: 200px;       
+    top: 170px;       
     overflow: hidden;
     transition-duration: .5s;    
     /* box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.377); */ 
@@ -265,6 +314,94 @@ input[type="checkbox"]:hover ~ label{
     transform: translate(0px, 0px);
     transition-duration: .3s;
 }
+#checkbox01:checked ~ .artInset{
+    height: 90vh;
+    min-width: 710px;    
+    border-radius: 40px;
+    /* transform: translate(0,0); */
+    background-color: #ffffff;
+    display: flex;    
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 330px;       
+    overflow: hidden;
+    transition-duration: .5s;    
+    /* box-shadow: 0 16px 20px -7px rgba(0, 0, 0, 0.377); */ 
+    z-index: 1;
+}
+#checkbox01:not(checked) ~ .artInset{
+    height: 410px;
+    width: 410px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;    
+    position: absolute;
+    left: auto;
+    right: auto;    
+    border-radius: 50%;    
+    border-radius: 50%;    
+    transform: translate(0px, 0px);
+    transition-duration: .3s;
+}
+#checkbox01:checked ~ .uCred{
+    display: flex;    
+    position: absolute;
+    top: 200px;
+    transform: translate(-172px, 200px);
+    transition-duration: .3s;
+    visibility: visible;
+    z-index: 1;    
+}
+#checkbox01:not(checked) ~ .uCred{
+    display: flex;    
+    position: absolute;
+    left: auto;
+    top: auto;
+    visibility: hidden;
+    z-index: 0;    
+}
+#checkbox01:checked ~ .epicodeCred{
+    display: flex;    
+    position: absolute;
+    top: 200px;
+    transform: translate(115px, 200px);
+    transition-duration: .3s;
+    visibility: visible;
+    max-height: 150px;
+    max-width: 300px;    
+    z-index: 1;    
+}
+#checkbox01:not(checked) ~ .epicodeCred{
+    display: flex;    
+    position: absolute;
+    left: auto;
+    right: auto;
+    visibility: hidden;
+    z-index: 0;    
+}
+#checkbox01:checked ~ .rLogo{
+    display: block;    
+    position: absolute;
+    top: 200px;
+    transform: translate(0px, 400px);
+    transition-duration: .3s;
+    visibility: visible;
+    max-width: 600px;        
+    z-index: 1;    
+}
+#checkbox01:not(checked) ~ .rLogo{
+    display: block;    
+    position: absolute;    
+    visibility: hidden;
+    z-index: 0;    
+}
+/* .eduList{
+    display: block;
+    position: absolute;
+    z-index: 0;
+    
+} */
+
 
 
 
