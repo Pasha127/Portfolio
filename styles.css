@@ -489,7 +489,7 @@ input[type="checkbox"]:hover + .label1{
 }
 
 #checkbox03:not(checked) ~ .workContainer{    
-    font-size: 14pt;    
+    font-size: 12pt;    
     height: 540px;
     min-width: 630px;    
     border-radius: 40px;    
@@ -508,7 +508,7 @@ input[type="checkbox"]:hover + .label1{
 .workT{
     display: block;
     position: absolute;
-    top: -14px;
+    top: 6px;
     
 }
 #checkbox03:checked ~ .workContainer{    
